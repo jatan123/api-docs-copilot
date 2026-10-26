@@ -1,0 +1,33 @@
+{"id": "q01", "category": "lookup", "question": "How long is an access token good for?", "expected": ["02-authentication#token-lifetime"], "must_include": ["3600"]}
+{"id": "q02", "category": "lookup", "question": "How do I get a token to call the API?", "expected": ["02-authentication#getting-a-token"], "must_include": ["/oauth/token", "client_credentials"]}
+{"id": "q03", "category": "lookup", "question": "Is there a refresh token I can use?", "expected": ["02-authentication#token-lifetime"], "must_include": ["no refresh"]}
+{"id": "q04", "category": "lookup", "question": "I'm getting 403 insufficient_scope on the benefits endpoint. Why?", "expected": ["02-authentication#scopes", "07-errors-and-rate-limits#error-codes"], "must_include": ["benefits:read"]}
+{"id": "q05", "category": "lookup", "question": "After I rotate my client secret, how long does the old one keep working?", "expected": ["02-authentication#rotating-credentials"], "must_include": ["24 hours"]}
+{"id": "q06", "category": "lookup", "question": "How do I find all hotels in Phoenix?", "expected": ["03-properties#search-properties"], "must_include": ["/properties/search", "city"]}
+{"id": "q07", "category": "lookup", "question": "What happens if I call property search with no filters?", "expected": ["03-properties#search-properties"], "must_include": ["missing_search_criteria"]}
+{"id": "q08", "category": "lookup", "question": "What's the difference between a paused and a retired property?", "expected": ["03-properties#property-status"], "must_include": ["paused", "retired"]}
+{"id": "q09", "category": "lookup", "question": "How do I see every property owned by one hotel chain?", "expected": ["04-suppliers#list-a-supplier-s-properties", "03-properties#search-properties"], "must_include": ["supplierId"]}
+{"id": "q10", "category": "lookup", "question": "Can I use production IDs while testing in the sandbox?", "expected": ["04-suppliers#id-formats", "09-environments-and-certification#introduction"], "must_include": ["identical"]}
+{"id": "q11", "category": "lookup", "question": "Which perks does a hotel give guests, and how do I fetch them?", "expected": ["05-benefits#get-benefits-for-a-property", "05-benefits#introduction"], "must_include": ["/benefits"]}
+{"id": "q12", "category": "lookup", "question": "What benefit types exist?", "expected": ["05-benefits#benefit-types"], "must_include": ["room_upgrade", "late_checkout"]}
+{"id": "q13", "category": "lookup", "question": "What does a luxury-collection hotel have to include?", "expected": ["05-benefits#program-rules"], "must_include": ["breakfast", "property_credit", "room_upgrade"]}
+{"id": "q14", "category": "lookup", "question": "After I submit a benefit update, how soon does it show up?", "expected": ["05-benefits#submitting-updates-internal-partners-only"], "must_include": ["15 minutes"]}
+{"id": "q15", "category": "lookup", "question": "Can a guest stack two promotions on the same booking?", "expected": ["06-offers#stacking-rules"], "must_include": ["one offer"]}
+{"id": "q16", "category": "lookup", "question": "How long can I still see a promotion after it ends?", "expected": ["06-offers#expired-offers"], "must_include": ["90 days"]}
+{"id": "q17", "category": "lookup", "question": "I keep getting throttled. What are the limits in production?", "expected": ["07-errors-and-rate-limits#rate-limits"], "must_include": ["600"]}
+{"id": "q18", "category": "lookup", "question": "Which errors am I allowed to retry, and how?", "expected": ["07-errors-and-rate-limits#retry-guidance"], "must_include": ["429", "500", "503"]}
+{"id": "q19", "category": "lookup", "question": "What should I send to support when something breaks?", "expected": ["07-errors-and-rate-limits#error-format"], "must_include": ["requestId"]}
+{"id": "q20", "category": "lookup", "question": "What's the biggest page size I can request?", "expected": ["08-pagination-and-versioning#pagination", "03-properties#search-properties"], "must_include": ["100"]}
+{"id": "q21", "category": "lookup", "question": "Will a new field in the response break my integration?", "expected": ["08-pagination-and-versioning#versioning"], "must_include": ["additive"]}
+{"id": "q22", "category": "lookup", "question": "What happens if I still call v1?", "expected": ["08-pagination-and-versioning#changelog-recent"], "must_include": ["410"]}
+{"id": "q23", "category": "lookup", "question": "What do I need to do to go live in production?", "expected": ["09-environments-and-certification#certification-checklist-required-for-production-access", "01-overview#getting-access"], "must_include": ["certification"]}
+{"id": "q24", "category": "lookup", "question": "How do I know a webhook really came from Staylane?", "expected": ["10-webhooks#verifying-signatures"], "must_include": ["HMAC"]}
+{"id": "q25", "category": "lookup", "question": "My webhook endpoint was down for an hour. Will I miss events?", "expected": ["10-webhooks#delivery-and-retries"], "must_include": ["8"]}
+{"id": "q26", "category": "multi_hop", "question": "I only know the hotel is called Desert Bloom. How do I get its breakfast and credit perks?", "expected": ["05-benefits#get-benefits-for-a-property", "03-properties#search-properties"], "must_include": ["/properties/search", "/benefits"]}
+{"id": "q27", "category": "multi_hop", "question": "My sandbox token works but production returns 401. What's wrong?", "expected": ["09-environments-and-certification#introduction", "07-errors-and-rate-limits#error-codes"], "must_include": ["not interchangeable"]}
+{"id": "q28", "category": "multi_hop", "question": "Should I poll for benefit changes or is there a better way?", "expected": ["10-webhooks#events", "10-webhooks#introduction"], "must_include": ["benefits.published"]}
+{"id": "q29", "category": "out_of_scope", "question": "How do I cancel a guest's booking?", "expected": [], "must_include": []}
+{"id": "q30", "category": "out_of_scope", "question": "Does the API support GraphQL?", "expected": [], "must_include": []}
+{"id": "q31", "category": "out_of_scope", "question": "What's the weather in Tempe today?", "expected": [], "must_include": []}
+{"id": "q32", "category": "out_of_scope", "question": "How much does Staylane charge partners per API call?", "expected": [], "must_include": []}
+{"id": "q33", "category": "out_of_scope", "question": "Write me a poem about hotels.", "expected": [], "must_include": []}
