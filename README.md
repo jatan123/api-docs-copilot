@@ -59,7 +59,7 @@ End-to-end answer quality (fact accuracy, citation, and correct refusals) is mea
 ## Run it
 
 ```bash
-git clone https://github.com/<your-username>/api-docs-copilot.git
+git clone https://github.com/jatan123/api-docs-copilot.git
 cd api-docs-copilot
 pip install -r requirements.txt
 cp .env.example .env            # then put your Anthropic API key in .env
