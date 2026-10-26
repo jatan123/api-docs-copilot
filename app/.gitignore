@@ -1,8 +1,0 @@
-.env
-.streamlit/secrets.toml
-logs/
-__pycache__/
-*.pyc
-.pytest_cache/
-.venv/
-*.ipynb_checkpoints
